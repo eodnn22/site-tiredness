@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tiredenees - Loja Oficial</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom black and white theme with sharp contrast */
+    body {
+      background-color: #000000;
+      color: #ffffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+    }
+
+    a:focus,
+    button:focus,
+    input:focus {
+      outline: 2px solid white;
+      outline-offset: 2px;
+    }
+    /* Logo styling to keep its circular crop */
+    .logo-container {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid white;
+      box-shadow: 0 0 8px #fff;
+      transition: transform 0.3s ease;
+    }
+    .logo-container:hover {
+      transform: scale(1.1);
+    }
+
+    /* Product image styling so they stand out in BW */
+    .product-image {
+      object-fit: cover;
+      border: 2px solid white;
+      border-radius: 8px;
+      box-shadow: 0 0 12px #fff;
+      transition: filter 0.3s ease;
+      filter: grayscale(100%) brightness(90%);
+    }
+    .product-image:hover {
+      filter: none;
+      cursor: pointer;
+    }
+
+    /* Button custom */
+    .btn {
+      background-color: transparent;
+      border: 2px solid white;
+      color: white;
+      font-weight: 600;
+      padding: 0.5rem 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .btn:hover,
+    .btn:focus {
+      background-color: white;
+      color: black;
+      outline: none;
+    }
+
+    /* Footer style */
+    footer {
+      font-size: 0.9rem;
+      border-top: 1px solid white;
+      padding-top: 1rem;
+      text-align: center;
+      margin-top: 3rem;
+      color: #ddd;
+    }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <header class="flex items-center justify-between px-6 py-5 border-b border-white">
+    <div class="logo-container">
+      <img 
+        src="https://scontent.fcwb6-1.fna.fbcdn.net/v/t1.15752-9/525441667_3632367783734074_7558607846452187757_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=0024fc&_nc_ohc=KRqt2xutJWoQ7kNvwFwj-kt&_nc_oc=Admqe1llJug82aoDmbO8qLkRgTnLZ8SqypF0X8Pdw4ZdJyUC6G0Ip468LkltPZMLs2xyKYDs5zfUrMkU-2Lz6MCs&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fcwb6-1.fna&oh=03_Q7cD2wFQ-bb9bxfcGfku6-UQIaoJsYB4F43e8pxBUZHaKd0SRg&oe=68B49FEB" 
+        alt="Logo circular estilizada da marca Tiredenees com letras góticas brancas sobre fundo preto, apresentando três estrelas pontiagudas" 
+        width="180" height="140"
+        onerror="this.style.display='none'"
+      />
+    </div>
+    <nav class="hidden md:flex space-x-8 text-white uppercase font-semibold tracking-wide text-sm">
+      <a href="#tenis" class="hover:underline focus:underline">Tênis TN Air Max</a>
+      <a href="#camisas" class="hover:underline focus:underline">Camisas Tiredenees</a>
+      <a href="#contato" class="hover:underline focus:underline">Contato</a>
+    </nav>
+    <button class="md:hidden text-white focus:outline-none" aria-label="Abrir menu" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+      ☰
+    </button>
+  </header>
+
+  <nav id="mobile-menu" class="md:hidden bg-black border-t border-white hidden px-6 py-4 space-y-4 text-center uppercase font-semibold tracking-wide text-white">
+    <a href="#tenis" class="block hover:underline focus:underline">Tênis TN Air Max</a>
+    <a href="#camisas" class="block hover:underline focus:underline">Camisas Tiredenees</a>
+    <a href="#contato" class="block hover:underline focus:underline">Contato</a>
+  </nav>
+
+  <main class="flex-grow px-6 py-10 max-w-7xl mx-auto">
+    <section>
+      <h1 class="text-4xl font-extrabold mb-6 uppercase tracking-widest border-b border-white pb-2">Tênis TN Air Max</h1>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+        <article>
+          <img 
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7d705cfd-f77f-4b42-a4aa-2bac73c6fa4b.png" 
+            alt="Tênis esportivo TN Air Max com design moderno em preto e branco, cabedal branco com detalhes em preto, sobre fundo minimalista preto" 
+            class="product-image w-full h-64 object-cover mb-3 rounded" 
+            loading="lazy"
+            onerror="this.style.display='none'"
+          />
+          <h2 class="text-xl font-semibold mb-1">Tênis TN Air Max Preto/Branco</h2>
+          <p class="mb-2">Conforto, estilo e tecnologia para a sua rotina.</p>
+          <button class="btn w-full" aria-label="Comprar Tênis TN Air Max Preto e Branco">Comprar</button>
+        </article>
+        <article>
+          <img 
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7b40b5e6-11a5-4c7e-99f3-53681d380536.png" 
+            alt="Tênis TN Air Max com base preta e detalhes brancos, visual robusto e estiloso, foto sobre fundo preto" 
+            class="product-image w-full h-64 object-cover mb-3 rounded" 
+            loading="lazy"
+            onerror="this.style.display='none'"
+          />
+          <h2 class="text-xl font-semibold mb-1">Tênis TN Air Max Preto/Branco Detalhado</h2>
+          <p class="mb-2">Design marcante para quem busca autenticidade.</p>
+          <button class="btn w-full" aria-label="Comprar Tênis TN Air Max Preto com Detalhes brancos">Comprar</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="camisas" class="mt-16">
+      <h1 class="text-4xl font-extrabold mb-6 uppercase tracking-widest border-b border-white pb-2">Camisas Tiredenees</h1>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+        <article>
+          <img 
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d7df0ef6-8301-499b-9938-3e3c70998229.png" 
+            alt="Camisa preta da marca Tiredenees exibindo o logo branco estilizado centralizado no peito, fundo preto padrão" 
+            class="product-image w-full h-64 object-cover mb-3 rounded" 
+            loading="lazy"
+            onerror="this.style.display='none'"
+          />
+          <h2 class="text-xl font-semibold mb-1">Camisa Preta Logo Branca</h2>
+          <p class="mb-2">Estilo urbano com atitude. 100% algodão.</p>
+          <button class="btn w-full" aria-label="Comprar Camisa Preta Tiredenees com logo branco">Comprar</button>
+        </article>
+        <article>
+          <img 
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e3ac8f5a-539b-425c-b4c3-16b476ca7831.png" 
+            alt="Camisa branca com logo Tiredenees preto estilizado central no peito, leve e confortável, sobre fundo preto com efeito degrade" 
+            class="product-image w-full h-64 object-cover mb-3 rounded" 
+            loading="lazy"
+            onerror="this.style.display='none'"
+          />
+          <h2 class="text-xl font-semibold mb-1">Camisa Branca Logo Preta</h2>
+          <p class="mb-2">Contraste perfeito para um visual marcante.</p>
+          <button class="btn w-full" aria-label="Comprar Camisa Branca Tiredenees com logo preto">Comprar</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="contato" class="mt-20 max-w-md mx-auto">
+      <h2 class="text-3xl font-extrabold mb-6 uppercase tracking-widest border-b border-white pb-2 text-center">Contato</h2>
+      <form aria-label="Formulário de contato Tiredenees" class="space-y-5" onsubmit="alert('Obrigado pelo contato! Em breve responderemos.'); return false;">
+        <label for="nome" class="block uppercase text-sm mb-1 font-semibold">Nome</label>
+        <input id="nome" name="nome" type="text" required placeholder="Seu nome" class="w-full rounded border border-white bg-black px-4 py-2 text-white focus:border-white focus:ring focus:ring-white focus:ring-opacity-50" />
+
+        <label for="email" class="block uppercase text-sm mb-1 font-semibold">Email</label>
+        <input id="email" name="email" type="email" required placeholder="seu@email.com" class="w-full rounded border border-white bg-black px-4 py-2 text-white focus:border-white focus:ring focus:ring-white focus:ring-opacity-50" />
+
+        <label for="mensagem" class="block uppercase text-sm mb-1 font-semibold">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="4" required placeholder="Escreva sua mensagem..." class="w-full rounded border border-white bg-black px-4 py-2 text-white focus:border-white focus:ring focus:ring-white focus:ring-opacity-50"></textarea>
+
+        <button type="submit" class="btn w-full">Enviar</button>
+      </form>
+    </section>
+  </main>
+  
+
+  <footer>
+    © 2024 Tiredenees. Todos os direitos reservados.
+  </footer>
+
+</body>
+</html>
+
+```
