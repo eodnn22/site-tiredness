@@ -368,12 +368,10 @@
         <p class="stock" aria-live="polite" id="stockStatus">em estoque</p>
       </div>
 
-     <a href="https://wa.me/5541997659560?text=Ol%C3%A1%2C%20Queria%20saber%20se%20a%20camisa%20estampada%20nas%20costas%20Tiredness%2C%20est%C3%A1%20dispon%C3%ADvel"
-   target="_blank"
-   class="btn-buy"
-   aria-label="Comprar botão">
+    <a href="#" onclick="enviarWhatsApp()" class="btn-buy" aria-label="Comprar botão">
   COMPRAR
 </a>
+
 
 
 
@@ -402,7 +400,28 @@
   </main>
 
   <script>
+    <script>
+  function enviarWhatsApp() {
+    const tamanho = document.getElementById("tamanhoInput")?.value || "não informado";
+    const quantidade = document.getElementById("qtyInput")?.value || 1;
+
+    const numero = "5541997659560";
+    const mensagem = `Olá, gostaria de comprar ${quantidade} camisa(s) tamanho ${tamanho} da marca Tiredness. Ainda está disponível?`;
+
+    const link = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+    window.open(link, "_blank");
+  }
+</script>
+
+    
+    
+    
+    
+    
+    
     // Handle thumbnails clicks to update main image
+
+
     const thumbnails = document.querySelectorAll('.thumbnail');
     const mainImage = document.getElementById('mainProductImage');
 
@@ -501,4 +520,4 @@
 </body>
 </html>
 
-```
+
