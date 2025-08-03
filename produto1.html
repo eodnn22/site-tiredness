@@ -371,27 +371,12 @@
       <button class="btn-buy" type="button" aria-label="Comprar botão">Comprar</button>
       <!-- Script do WhatsApp -->
 <script>
-  function comprar() {
+  function enviarWhatsApp() {
     const numero = '5541997659560'; // Seu número com DDI e DDD
-    const nomeProduto = document.getElementById('productName').innerText;
-    const quantidade = document.getElementById('qtyInput').value;
-
-    const mensagem = `Olá! Gostaria de comprar ${quantidade} unidade(s) do produto: ${nomeProduto}`;
+    const mensagem = 'Olá, Queria saber se a camisa estampada nas costas Tiredness, está disponível';
     const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
-
     window.open(url, '_blank');
   }
-
-  // Controles de quantidade (opcional)
-  document.getElementById('qtyMinus').onclick = () => {
-    const input = document.getElementById('qtyInput');
-    if (parseInt(input.value) > 1) input.value = parseInt(input.value) - 1;
-  };
-
-  document.getElementById('qtyPlus').onclick = () => {
-    const input = document.getElementById('qtyInput');
-    if (parseInt(input.value) < 10) input.value = parseInt(input.value) + 1;
-  };
 </script>
 
 
